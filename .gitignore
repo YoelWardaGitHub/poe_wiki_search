@@ -1,0 +1,14 @@
+# OS / editor cruft
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.log
+
+# Editor folders
+.vscode/
+.idea/
+
+# Packaged extension
+*.zip
+*.crx
+*.pem
