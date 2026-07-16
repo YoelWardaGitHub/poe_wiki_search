@@ -1,6 +1,6 @@
 {
   "name": "poewiki-quick-search",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Chrome/Firefox extension (MV3): omnibox keyword 'poe' to search poewiki.net.",
   "private": true,
   "scripts": {
