@@ -1,0 +1,12 @@
+{
+  "categories": ["search-tools"],
+  "summary": {
+    "en-US": "Search the Path of Exile Wiki and poedb.tw from your address bar. Type 'poe' for the wiki, or 'poe db ...' for poedb."
+  },
+  "description": {
+    "en-US": "One keyword, two Path of Exile databases.\n\nType 'poe' in the address bar, press Space, then your query:\n- 'poe lightning strike' searches the Path of Exile Wiki (poewiki.net)\n- 'poe db lightning strike' searches poedb.tw\n\nWhile you type, the dropdown also offers the other site as a selectable option, so you can pick either destination with the arrow keys.\n\nFeatures:\n- Single 'poe' omnibox keyword for both sites\n- Open results in the current tab, or Alt+Enter for a new tab\n- Zero configuration, no accounts, no tracking\n- Lightweight and open source\n\nBecause poedb.tw's on-site search requires a session token, poedb queries are routed through a Google site search scoped to poedb.tw/us.\n\nThis is an unofficial, fan-made extension and is not affiliated with or endorsed by Grinding Gear Games, the Path of Exile Wiki, or poedb.tw."
+  },
+  "version": {
+    "license": "MIT"
+  }
+}
