@@ -16,6 +16,9 @@ Desktop.ini
 # Node
 node_modules/
 
+# Generated build output
+build/
+
 # Packaged / signed extension artifacts
 *.zip
 *.crx

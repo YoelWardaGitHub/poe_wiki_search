@@ -49,10 +49,19 @@ Requires [Node.js](https://nodejs.org/). Install tooling with `npm install`.
 
 | Command         | What it does                                            |
 | --------------- | ------------------------------------------------------- |
-| `npm run lint`    | Validate the extension with `web-ext lint`.                       |
-| `npm run build`   | Package an unsigned `.zip` into `web-ext-artifacts/`.             |
-| `npm run sign`    | Produce a Mozilla-signed `.xpi` (self-distributed, unlisted).    |
-| `npm run publish` | Submit a **listed** version to addons.mozilla.org for review.    |
+| `npm run pack:firefox` | Generate a Firefox-tailored build in `build/firefox/`.       |
+| `npm run lint`         | Build for Firefox, then validate with `web-ext lint`.        |
+| `npm run build`        | Package an unsigned Chrome `.zip` into `web-ext-artifacts/`. |
+| `npm run sign`         | Produce a Mozilla-signed `.xpi` (self-distributed, unlisted).|
+| `npm run publish`      | Submit a **listed** version to addons.mozilla.org for review.|
+
+### Cross-browser note
+
+`src/manifest.json` is cross-browser: it keeps `background.service_worker` (required
+by Chrome) alongside `background.scripts` (required by Firefox). Firefox rejects the
+`service_worker` key with a warning, so the Firefox/AMO commands run `pack:firefox`
+first, which copies `src/` into `build/firefox/` and strips `service_worker`. Load
+`src/` directly in Chrome; the signed/listed Firefox artifacts come from `build/firefox/`.
 
 Listing metadata (summary, description, category, license) is read from
 `amo-metadata.json`. Bump the `version` in both `src/manifest.json` and

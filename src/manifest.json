@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "PoeWiki Quick Search",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Type 'poe' in the address bar to search poewiki.net.",
   "omnibox": {
     "keyword": "poe"
@@ -13,10 +13,7 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "poewiki-quick-search@yoelwarda",
-      "strict_min_version": "115.0",
-      "data_collection_permissions": {
-        "required": ["none"]
-      }
+      "strict_min_version": "115.0"
     }
   },
   "icons": {
