@@ -1,0 +1,16 @@
+{
+  "name": "poedb-quick-search",
+  "version": "1.0.0",
+  "description": "Chrome/Firefox extension (MV3): omnibox keyword 'poedb' to search poedb.tw.",
+  "private": true,
+  "scripts": {
+    "pack:firefox": "node scripts/pack-firefox.mjs",
+    "lint": "npm run pack:firefox && web-ext lint --source-dir=build/firefox",
+    "build": "web-ext build --source-dir=src --overwrite-dest",
+    "sign": "npm run pack:firefox && web-ext sign --source-dir=build/firefox --channel=unlisted",
+    "publish": "npm run pack:firefox && web-ext sign --source-dir=build/firefox --channel=listed --amo-metadata=amo-metadata.json"
+  },
+  "devDependencies": {
+    "web-ext": "^8.3.0"
+  }
+}

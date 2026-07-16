@@ -1,0 +1,12 @@
+{
+  "categories": ["search-tools"],
+  "summary": {
+    "en-US": "Search poedb.tw (the Path of Exile database) from your address bar. Type 'poedb', press space, and search."
+  },
+  "description": {
+    "en-US": "Add a fast keyword search for poedb.tw, the Path of Exile database, to your browser.\n\nJust type 'poedb' in the address bar, press Space, then enter what you're looking for - items, skills, gems, mods, monsters, anything. Press Enter to see the results.\n\nFeatures:\n- Omnibox keyword: type 'poedb' + Space to search instantly\n- Handles fuzzy and partial queries\n- Open results in the current tab, or Alt+Enter for a new tab\n- Zero configuration, no accounts, no tracking\n- Lightweight and open source\n\nBecause poedb.tw's on-site search requires a session token, this extension routes queries through a Google site search scoped to poedb.tw/us.\n\nThis is an unofficial, fan-made extension and is not affiliated with or endorsed by Grinding Gear Games or poedb.tw."
+  },
+  "version": {
+    "license": "MIT"
+  }
+}
