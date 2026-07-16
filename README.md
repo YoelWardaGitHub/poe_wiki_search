@@ -10,22 +10,56 @@ A minimal cross-browser extension (Manifest V3) that adds an omnibox keyword for
 
 The query is sent to poewiki.net's built-in `Special:Search` page.
 
-## Installation (unpacked)
+## Installation
 
-### Chrome
+### Chrome (unpacked)
 
 1. Open `chrome://extensions`.
 2. Enable **Developer mode** (top right).
-3. Click **Load unpacked** and select this folder.
+3. Click **Load unpacked** and select the `src/` folder.
 
-### Firefox
+### Firefox (temporary — cleared on restart)
 
 1. Open `about:debugging#/runtime/this-firefox`.
 2. Click **Load Temporary Add-on…**.
-3. Select the `manifest.json` file in this folder.
+3. Select `src/manifest.json`.
 
-## Files
+### Firefox (permanent — signed `.xpi`)
 
-- `manifest.json` — extension manifest (MV3, omnibox keyword `poe`, cross-browser background config)
-- `background.js` — builds the search URL and opens it
-- `icon.png` — 128x128 placeholder icon
+Temporary add-ons are unloaded when Firefox restarts. For a permanent install,
+use the Mozilla-signed `.xpi` produced by the signing step below:
+
+1. Run `npm run sign` (see below) to generate a signed `.xpi` in `web-ext-artifacts/`.
+2. Open `about:addons`.
+3. Click the gear icon → **Install Add-on From File…** and select the `.xpi`.
+
+## Project layout
+
+```
+src/            # the shipped extension
+  manifest.json # MV3 manifest (omnibox keyword `poe`, cross-browser background)
+  background.js  # builds the search URL and opens it
+  icon.png       # 128x128 placeholder icon
+package.json    # web-ext tooling (lint / build / sign)
+```
+
+## Development / signing
+
+Requires [Node.js](https://nodejs.org/). Install tooling with `npm install`.
+
+| Command         | What it does                                            |
+| --------------- | ------------------------------------------------------- |
+| `npm run lint`  | Validate the extension with `web-ext lint`.             |
+| `npm run build` | Package an unsigned `.zip` into `web-ext-artifacts/`.   |
+| `npm run sign`  | Produce a Mozilla-signed `.xpi` (self-distributed).     |
+
+Signing needs Mozilla add-on API credentials. Get them from the
+[AMO API key page](https://addons.mozilla.org/developers/addon/api/key/) and
+put them in a local `.env` file (already gitignored):
+
+```
+WEB_EXT_API_KEY=your-jwt-issuer
+WEB_EXT_API_SECRET=your-jwt-secret
+```
+
+> **Never commit `.env`** — it holds your Mozilla signing secret.

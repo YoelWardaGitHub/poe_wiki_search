@@ -1,0 +1,14 @@
+{
+  "name": "poewiki-quick-search",
+  "version": "1.0.0",
+  "description": "Chrome/Firefox extension (MV3): omnibox keyword 'poe' to search poewiki.net.",
+  "private": true,
+  "scripts": {
+    "lint": "web-ext lint --source-dir=src",
+    "build": "web-ext build --source-dir=src --overwrite-dest",
+    "sign": "web-ext sign --source-dir=src --channel=unlisted"
+  },
+  "devDependencies": {
+    "web-ext": "^8.3.0"
+  }
+}

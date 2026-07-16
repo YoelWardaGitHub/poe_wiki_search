@@ -8,7 +8,17 @@ Desktop.ini
 .vscode/
 .idea/
 
-# Packaged extension
+# Secrets / credentials
+.env
+.env.*
+*.secret
+
+# Node
+node_modules/
+
+# Packaged / signed extension artifacts
 *.zip
 *.crx
 *.pem
+*.xpi
+web-ext-artifacts/
