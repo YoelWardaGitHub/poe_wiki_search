@@ -49,9 +49,14 @@ Requires [Node.js](https://nodejs.org/). Install tooling with `npm install`.
 
 | Command         | What it does                                            |
 | --------------- | ------------------------------------------------------- |
-| `npm run lint`  | Validate the extension with `web-ext lint`.             |
-| `npm run build` | Package an unsigned `.zip` into `web-ext-artifacts/`.   |
-| `npm run sign`  | Produce a Mozilla-signed `.xpi` (self-distributed).     |
+| `npm run lint`    | Validate the extension with `web-ext lint`.                       |
+| `npm run build`   | Package an unsigned `.zip` into `web-ext-artifacts/`.             |
+| `npm run sign`    | Produce a Mozilla-signed `.xpi` (self-distributed, unlisted).    |
+| `npm run publish` | Submit a **listed** version to addons.mozilla.org for review.    |
+
+Listing metadata (summary, description, category, license) is read from
+`amo-metadata.json`. Bump the `version` in both `src/manifest.json` and
+`package.json` before each submission — AMO requires a unique version per upload.
 
 Signing needs Mozilla add-on API credentials. Get them from the
 [AMO API key page](https://addons.mozilla.org/developers/addon/api/key/) and

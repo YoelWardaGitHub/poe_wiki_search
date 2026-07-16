@@ -1,0 +1,12 @@
+{
+  "categories": ["search-tools"],
+  "summary": {
+    "en-US": "Search the Path of Exile Wiki (poewiki.net) from your address bar. Type 'poe', press space, and search."
+  },
+  "description": {
+    "en-US": "Add a lightning-fast keyword search for the Path of Exile Wiki to your browser.\n\nJust type 'poe' in the address bar, press Space, then enter what you're looking for - items, skills, mechanics, uniques, anything. Press Enter to jump straight to the results on poewiki.net.\n\nFeatures:\n- Omnibox keyword: type 'poe' + Space to search instantly\n- Goes directly to poewiki.net's own search (exact page titles jump straight to the article)\n- Open results in the current tab, or Alt+Enter for a new tab\n- Zero configuration, no accounts, no tracking\n- Lightweight and open source\n\nThis is an unofficial, fan-made extension and is not affiliated with or endorsed by Grinding Gear Games or the Path of Exile Wiki."
+  },
+  "version": {
+    "license": "MIT"
+  }
+}
