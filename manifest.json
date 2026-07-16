@@ -2,12 +2,19 @@
   "manifest_version": 3,
   "name": "PoeWiki Quick Search",
   "version": "1.0.0",
-  "description": "Type 'poe' in the address bar to search poewiki.net via Google.",
+  "description": "Type 'poe' in the address bar to search poewiki.net.",
   "omnibox": {
     "keyword": "poe"
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "scripts": ["background.js"]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "poewiki-quick-search@yoelwarda",
+      "strict_min_version": "115.0"
+    }
   },
   "icons": {
     "128": "icon.png"
