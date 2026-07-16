@@ -37,6 +37,16 @@ path of exile, poe, wiki, poewiki, search, omnibox, gaming
 ## Support / Homepage URL
 https://github.com/YoelWardaGitHub/poe_wiki_search
 
+## Screenshots
+Screenshots must be uploaded manually in the AMO Developer Hub (the signing API /
+web-ext do not upload previews). Files live in `store-assets/screenshots/`.
+
+- `store-assets/screenshots/omnibox-suggestion.png` — the `poe` keyword suggestion
+  in the address bar.
+
+To add: Developer Hub → your add-on → **Edit Listing** → **Images / Screenshots**
+→ upload the file(s) → Save.
+
 ## Privacy
 This extension does not collect, store, or transmit any personal data. Search
 terms are sent only to poewiki.net to perform the search you requested. No
